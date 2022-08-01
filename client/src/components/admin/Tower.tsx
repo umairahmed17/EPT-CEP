@@ -39,6 +39,7 @@ function Tower(): JSX.Element {
             </label>
             <div className="relative w-full">
               <select
+                required
                 name="conductor_type"
                 className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               >
@@ -69,11 +70,13 @@ function Tower(): JSX.Element {
             </label>
             <div className="relative flex flex-row gap-2">
               <input
+                required
                 name="conductor_length"
                 className="w-3/5 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
               />
               <select
+                required
                 name="conductor_length_unit"
                 className="w-2/5 block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               >
@@ -99,6 +102,7 @@ function Tower(): JSX.Element {
               Conductor Cross-Sectional Area
             </label>
             <input
+              required
               name="conductor_cross_sectional_area"
               type="number"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -113,6 +117,7 @@ function Tower(): JSX.Element {
               Frequency
             </label>
             <input
+              required
               name="frequency"
               type="number"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -126,6 +131,7 @@ function Tower(): JSX.Element {
               Temperature Effect
             </label>
             <input
+              required
               name="temperature_effect"
               type="number"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -140,6 +146,7 @@ function Tower(): JSX.Element {
             </label>
             <div className="relative w-full">
               <select
+                required
                 name="conductor_type"
                 className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               >
@@ -166,11 +173,13 @@ function Tower(): JSX.Element {
             </label>
             <div className="relative flex flex-row gap-2">
               <input
+                required
                 name="spacing_between_conductors"
                 className="w-3/5 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
               />
               <select
+                required
                 name="spacing_between_conductors_unit"
                 className="w-2/5 block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               >
@@ -196,6 +205,7 @@ function Tower(): JSX.Element {
               Sending End Voltage
             </label>
             <input
+              required
               name="sending_end_voltage_in_KV"
               type="number"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -212,6 +222,7 @@ function Tower(): JSX.Element {
               Power Transmitted
             </label>
             <input
+              required
               name="power_transmitted_in_MVA"
               type="number"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -229,6 +240,7 @@ function Tower(): JSX.Element {
             </label>
             <div className="relative w-full">
               <select
+                required
                 name="line_type"
                 className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               >
