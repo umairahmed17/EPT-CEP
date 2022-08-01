@@ -6,6 +6,37 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./sqlite.db"
+}
+
+model Tower {
+  id                                 Int     @id @default(autoincrement())
+  name                               String
+  description                        String?
+  tower_height                       Float?
+  frequency                          Float?
+  resistance                         Float?
+  skin_depth                         Float?
+  temperature_effect                 Float?
+  spacing_between_bundled_conductors Float?
+  spacing_between_conductors         Float?
+  current_carrying_capacity          Float?
+  inductance_of_transmission_lines   Float?
+  capacitance                        Float?
+  capacitive_reactance               Float?
+  conductor_type                     String?
+  conductor_length                   Float?
+  conductor_cross_sectional_area     Float?
+  span                               Float?
+  commulative_line_loading           Float?
+  cable_configuration                String?
+  power_transmitted_in_MVA           Float?
+  power_received_at_load_in_MVA      Float?
+  efficiency                         Float?
+  sending_end_voltage_in_KV          Float?
+  receiving_end_voltage_in_KV        Float?
+  voltage_regulation                 Float?
+  corona_losses                      Float?
+  line_type                          String?
 }
