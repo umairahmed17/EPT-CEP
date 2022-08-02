@@ -4,12 +4,12 @@ function Main(): JSX.Element {
       <ul className="grid gap-6 w-full md:grid-cols-2">
         <li>
           <a
-            href="/tower/33"
+            href="/tower/66"
             className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
           >
             <div className="block">
               <div className="w-full text-lg font-semibold">
-                33 KV Single Circuit
+                66 KV Single Circuit
               </div>
             </div>
             <svg
@@ -29,12 +29,12 @@ function Main(): JSX.Element {
         </li>
         <li>
           <a
-            href="/tower/66"
+            href="/tower/662"
             className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
           >
             <div className="block">
               <div className="w-full text-lg font-semibold">
-                66 KV Single Circuit
+                66 KV Double Circuit
               </div>
             </div>
             <svg
