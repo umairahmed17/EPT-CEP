@@ -53,6 +53,7 @@ function Tower(): JSX.Element {
     inductiveReactance: number;
     capacitiveReactance: number;
     voltageRegulation: number;
+    efficiency: number;
     coronaLoss: number;
     groundClearance: number;
     sag: number;
@@ -60,6 +61,7 @@ function Tower(): JSX.Element {
     inductiveReactance: 0,
     capacitiveReactance: 0,
     voltageRegulation: 0,
+    efficiency: 0,
     coronaLoss: 0,
     groundClearance: 0,
     sag: 0,
@@ -276,6 +278,18 @@ function Tower(): JSX.Element {
             required
             type="number"
             value={data.voltageRegulation || ""}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Efficiency
+          </label>
+          <input
+            readOnly
+            required
+            type="number"
+            value={data.efficiency || ""}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>

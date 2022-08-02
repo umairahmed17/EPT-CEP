@@ -1,4 +1,4 @@
-import math, { MathType } from "mathjs";
+import * as math from "mathjs";
 
 export function voltageRegulation(
   r20: number,
