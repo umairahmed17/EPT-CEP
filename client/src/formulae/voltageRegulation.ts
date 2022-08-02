@@ -25,9 +25,10 @@ export function voltageRegulation(
     const vr = (Vr * 1000) / Math.sqrt(3);
     const vs = math.add(math.multiply(Il, z), vr); //sending end voltage line to neutral
 
-    const Vrnl = Math.abs(vs as number);
+    const Vrnl = math.abs(vs as number);
     const Vrfl = vr;
-    return ((Vrnl - Vrfl) / Vrfl) * 100;
+
+    return math.multiply(math.divide(math.subtract(Vrnl, Vrfl), Vrfl), 100);
   } else if (L > 80 && L <= 240) {
     const t = T + 40;
     const r75 = ((228 + t) / (228 + 20)) * r20;

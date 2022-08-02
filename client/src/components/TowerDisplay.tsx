@@ -1,7 +1,11 @@
 import { MouseEvent, useState } from "react";
 import { useParams } from "react-router-dom";
 import { capacitiveReactanceCalculator } from "../formulae/capacitance";
+import { coronaLossCalculator } from "../formulae/coronaLoss";
+import { efficiencyCalculator } from "../formulae/efficiency";
+import { groundClearance } from "../formulae/groundClearance";
 import { inductiveReactanceCalculator } from "../formulae/inductance";
+import { sagCalculator } from "../formulae/sag";
 import { voltageRegulationCalculator } from "../formulae/voltageRegulation";
 
 function Tower(): JSX.Element {
@@ -39,13 +43,54 @@ function Tower(): JSX.Element {
       ),
       voltageRegulation: voltageRegulationCalculator(
         parseInt(id),
-        data.inductiveReactance,
-        data.capacitiveReactance,
+        inductiveReactanceCalculator(
+          parseInt(id),
+          parseFloat(Dab as string),
+          parseFloat(Dbc as string),
+          parseFloat(Dca as string)
+        ),
+        capacitiveReactanceCalculator(
+          parseInt(id),
+          parseFloat(Dab as string),
+          parseFloat(Dbc as string),
+          parseFloat(Dca as string)
+        ),
         parseFloat(power_transmission as string),
         parseFloat(pf as string),
         parseFloat(distance_transmission as string),
         parseFloat(ambient_temperature as string)
       ),
+      efficiency: efficiencyCalculator(
+        parseInt(id),
+        inductiveReactanceCalculator(
+          parseInt(id),
+          parseFloat(Dab as string),
+          parseFloat(Dbc as string),
+          parseFloat(Dca as string)
+        ),
+        capacitiveReactanceCalculator(
+          parseInt(id),
+          parseFloat(Dab as string),
+          parseFloat(Dbc as string),
+          parseFloat(Dca as string)
+        ),
+        parseFloat(power_transmission as string),
+        parseFloat(pf as string),
+        parseFloat(distance_transmission as string),
+        parseFloat(ambient_temperature as string)
+      ),
+      coronaLoss: coronaLossCalculator(
+        parseInt(id),
+        parseFloat(Dab as string),
+        parseFloat(Dbc as string),
+        parseFloat(Dca as string),
+        parseFloat(air_density_factor as string),
+        parseFloat(distance_transmission as string)
+      ),
+      groundClearance: groundClearance(
+        parseInt(id) !== 662 ? parseInt(id) : 66
+      ),
+      sag: sagCalculator(parseInt(id), parseFloat(tension as string)),
     });
   };
 
