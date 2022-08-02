@@ -32,6 +32,91 @@ function Tower(): JSX.Element {
         >
           <div className="mb-4">
             <label
+              htmlFor="name"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Name
+            </label>
+            <input
+              required
+              name="name"
+              type="text"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="description"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Description
+            </label>
+            <input
+              required
+              name="description"
+              type="textarea"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="tower_height"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Tower Height
+            </label>
+            <input
+              required
+              name="tower_height"
+              type="number"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="span"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Span
+            </label>
+            <input
+              required
+              name="span"
+              type="number"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="commulative_line_loading"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Commulative Line Loading
+            </label>
+            <input
+              required
+              name="commulative_line_loading"
+              type="number"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="receiving_end_voltage_in_KV"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Receiving End Voltage
+            </label>
+            <input
+              required
+              name="receiving_end_voltage_in_KV"
+              type="number"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
+            <p className="text-gray-600 text-xs italic">Specify in KV</p>
+          </div>
+          <div className="mb-4">
+            <label
               htmlFor="conductor_type"
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             >
@@ -111,7 +196,7 @@ function Tower(): JSX.Element {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="conductor_cross_sectional_area"
+              htmlFor="frequency"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
               Frequency
@@ -125,7 +210,7 @@ function Tower(): JSX.Element {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="conductor_cross_sectional_area"
+              htmlFor="temperature_effect"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
               Temperature Effect
@@ -139,15 +224,15 @@ function Tower(): JSX.Element {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="conductor_type"
+              htmlFor="cable_configuration"
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             >
-              Conductor Type
+              Cable Configuration
             </label>
             <div className="relative w-full">
               <select
                 required
-                name="conductor_type"
+                name="cable_configuration"
                 className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               >
                 <option value={1}>Horizontal</option>
@@ -166,7 +251,7 @@ function Tower(): JSX.Element {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="conductor_length"
+              htmlFor="spacing_between_conductors"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
               Spacing between Conductors
@@ -233,10 +318,10 @@ function Tower(): JSX.Element {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="conductor_type"
+              htmlFor="line_type"
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             >
-              Conductor Type
+              Line Type
             </label>
             <div className="relative w-full">
               <select
