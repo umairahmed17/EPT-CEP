@@ -1,7 +1,12 @@
+import { url } from "inspector";
+
 function Main(): JSX.Element {
   return (
     <div>
-      <div className="h-screen flex flex-column items-center justify-center">
+      <div
+        style={{ backgroundImage: "url('/hero.jpg')" }}
+        className="h-screen flex flex-column items-center justify-center bg-no-repeat bg-cover bg-bottom"
+      >
         <div>
           <h1 className="mb-5 mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             Transmission Line Design
